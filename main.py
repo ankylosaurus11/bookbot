@@ -12,15 +12,11 @@ def character_counter(words):
     return letter_dictionary
 
 def aggregate_data(data):
-    agg_list = []
-    alpha_data = {}
+    new_data = {}
     for i in data:
         if i.isalpha():
-            alpha_data["char"] = i
-            print("isalpha")
-        else:
-            print("notalpha")
-    print(alpha_data)
+            new_data[i] = data[i]
+    print(new_data)
 
 
 def main():
