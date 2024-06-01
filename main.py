@@ -1,12 +1,16 @@
+def word_counter(text):
+    text_list = text.split()
+    return len(text_list)
+
+def character_counter(words):
+    character_count = {}
+
+
 def main():
     with open("books/frankenstein.txt") as f:
         file_contents = f.read()
-        word_counter(file_contents)
+    word_count = word_counter(file_contents)
+    print(word_count)
 
-def word_counter(text):
-    text_list = text.split()
-    total_count = len(text_list)
-    print(total_count)
-
-
-main()
+if __name__ == "__main__":
+    main()
