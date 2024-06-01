@@ -36,7 +36,8 @@ def main():
     sorted_out = sort_dic(aggregation)
     sorted_out.sort(reverse=True, key=sorting)
     print("--- Begin report of books/frankenstein.txt ---")
-    print(f"{word_count} words found in the document")
+    print(f"{word_count} words found in the document" 
+    "\n")
     for i in sorted_out:
         print(f"The {i["letter"]} character was found {i["count"]} times")
     print("--- End report ---")
