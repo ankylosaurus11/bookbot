@@ -16,7 +16,7 @@ def aggregate_data(data):
     for i in data:
         if i.isalpha():
             new_data[i] = data[i]
-    print(new_data)
+    return new_data
 
 
 def main():
@@ -27,6 +27,11 @@ def main():
     aggregation = aggregate_data(individual_characters)
     print(individual_characters)
     print(word_count)
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"{word_count} words found in the document")
+    for i in aggregation:
+        print(f"The character was found times")
+    print("--- End report ---")
 
 
 if __name__ == "__main__":
