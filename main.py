@@ -18,6 +18,11 @@ def aggregate_data(data):
             new_data[i] = data[i]
     return new_data
 
+def sort_dic(aggregation):
+    alpha_data = aggregation.keys()
+    num_data = aggregation.values()
+    print(alpha_data, num_data)
+
 
 def main():
     with open("books/frankenstein.txt") as f:
@@ -25,12 +30,13 @@ def main():
     word_count = word_counter(file_contents)
     individual_characters = character_counter(list(file_contents.lower()))
     aggregation = aggregate_data(individual_characters)
+    sorted_out = sort_dic(aggregation)
     print(individual_characters)
     print(word_count)
     print("--- Begin report of books/frankenstein.txt ---")
     print(f"{word_count} words found in the document")
     for i in aggregation:
-        print(f"The character was found times")
+        print(f"The {i} character was found times")
     print("--- End report ---")
 
 
