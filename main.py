@@ -24,6 +24,8 @@ def sort_dic(aggregation):
         full_data.append({"letter": key, "count": value})
     return full_data
 
+def sorting(sort):
+    return sort["count"]
 
 def main():
     with open("books/frankenstein.txt") as f:
@@ -32,8 +34,7 @@ def main():
     individual_characters = character_counter(list(file_contents.lower()))
     aggregation = aggregate_data(individual_characters)
     sorted_out = sort_dic(aggregation)
-    print(individual_characters)
-    print(word_count)
+    sorted_out.sort(reverse=True, key=sorting)
     print("--- Begin report of books/frankenstein.txt ---")
     print(f"{word_count} words found in the document")
     for i in sorted_out:
