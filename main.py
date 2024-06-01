@@ -22,7 +22,7 @@ def sort_dic(aggregation):
     full_data = []
     for key, value in aggregation.items():
         full_data.append({"letter": key, "count": value})
-    print(full_data)
+    return full_data
 
 
 def main():
@@ -36,8 +36,8 @@ def main():
     print(word_count)
     print("--- Begin report of books/frankenstein.txt ---")
     print(f"{word_count} words found in the document")
-    for i in aggregation:
-        print(f"The {i} character was found times")
+    for i in sorted_out:
+        print(f"The {i["letter"]} character was found {i["count"]} times")
     print("--- End report ---")
 
 
