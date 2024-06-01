@@ -5,9 +5,9 @@ def word_counter(text):
 def character_counter(words):
     letter_dictionary = {}
     for i in words:
-        if i in letter_dictionary:
-            letter_dictionary[i] = +1
-        elif:
+        if i in letter_dictionary.keys():
+            letter_dictionary[i] += 1
+        else:
             letter_dictionary[i] = 1
     return letter_dictionary
 
