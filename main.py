@@ -19,9 +19,10 @@ def aggregate_data(data):
     return new_data
 
 def sort_dic(aggregation):
-    alpha_data = aggregation.keys()
-    num_data = aggregation.values()
-    print(alpha_data, num_data)
+    full_data = []
+    for key, value in aggregation.items():
+        full_data.append({"letter": key, "count": value})
+    print(full_data)
 
 
 def main():
